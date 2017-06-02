@@ -33,22 +33,20 @@
     border-bottom-color: #DDDDDD;
     background-color: #FF6600;
   }
-
-  /*.logo {*/
-    /*position: relative;*/
-    /*width: 50px;*/
-    /*height: 50px;*/
-    /*top: 35px;*/
-    /*left: 35px;*/
-    /*border-width: 3px;*/
-    /*border-style: solid;*/
-    /*border-color: #FFFFFF;*/
-  /*}*/
-  /*.image {*/
-    /*width: 44px;*/
-    /*height: 44px;*/
-  /*}*/
-
+  .logo {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    top: 35px;
+    left: 35px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: #FFFFFF;
+  }
+  .image {
+    width: 44px;
+    height: 44px;
+  }
   .nav {
     display: flex;
     position: absolute;
