@@ -1,10 +1,13 @@
 <template>
   <div class="cell-item">
+
     <text class="story-score">{{story.score}}</text>
+
     <external-link :url="story.url" class="story-link">
       <text class="story-title">{{story.title}}</text>
       <text class="small-text" v-if="story.url">({{ story.url | host }})</text>
     </external-link>
+
     <div class="text-group">
       <text class="small-text text-cell">by </text>
 
@@ -17,13 +20,16 @@
         </div>
       <text class="small-text text-cell"> | {{ story.time | timeAgo }} ago</text>
       <text class="small-text text-cell" v-if="!noComment"> | </text>
+
         <!--<div class="text-cell" @click="jump(`/item/${story.id}`)" v-if="!noComment">-->
             <!--<text class="small-text link-text">{{ story.descendants }} comments</text>-->
         <!--</div>-->
         <div class="text-cell">
             <text class="small-text link-text">{{ story.descendants }} comments</text>
         </div>
+
     </div>
+
   </div>
 </template>
 
