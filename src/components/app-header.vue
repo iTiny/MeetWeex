@@ -22,8 +22,25 @@
     </div>
   </div>
 </template>
+<script>
+  const navigator = weex.requireModule('navigator')
+  const modal = weex.requireModule('modal')
+
+  export default {
+      methods: {
+          jump(ev) {
+              navigator.push({},)
+              modal.toast({
+                  message:ev,
+                  duration:0.5
+              })
+          }
+      }
+  }
+</script>
 
 <style scoped>
+
   .header {
     position: relative;
     height: 120px;
@@ -48,6 +65,7 @@
     height: 44px;
   }
   .nav {
+
     display: flex;
     position: absolute;
     left: 120px;
@@ -56,6 +74,7 @@
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
+
   }
   .link {
     padding-left: 15px;
