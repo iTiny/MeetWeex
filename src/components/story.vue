@@ -12,14 +12,16 @@
             <!--<text class="small-text link-text">{{story.by}}</text>-->
         <!--</div>-->
 
-        <div class="text-cell">
+        <div class="text-cell" @click="more">
             <text class="small-text link-text">{{story.by}}</text>
         </div>
       <text class="small-text text-cell"> | {{ story.time | timeAgo }} ago</text>
       <text class="small-text text-cell" v-if="!noComment"> | </text>
+
         <!--<div class="text-cell" @click="jump(`/item/${story.id}`)" v-if="!noComment">-->
             <!--<text class="small-text link-text">{{ story.descendants }} comments</text>-->
         <!--</div>-->
+
         <div class="text-cell">
             <text class="small-text link-text">{{ story.descendants }} comments</text>
         </div>
@@ -79,6 +81,7 @@
 
 //  import ExternalLink from './external-link.vue'
 //
+const  modal = weex.requireModule('modal')
   export default {
 //    components: { ExternalLink },
     props: {
@@ -89,7 +92,27 @@
       'no-comment': {
         type: [String, Boolean],
         default: false
-      }
+      },
+
+        methods: {
+
+            more(){
+//                var bundleUrl = weex.config.bundleUrl;
+//                var baseURL = bundleUrl.substring(0, bundleUrl.lastIndexOf("/") + 1)
+
+                modal.toast({
+                    message: 'This is a toast',
+                    duration: 0.3
+                })
+
+//                navigator.push({url: baseURL + 'stories-view.vue'}, () => {
+//                })
+            }
+
+        }
+
     }
+
+
   }
 </script>

@@ -22,22 +22,23 @@
     </div>
   </div>
 </template>
-<script>
-  const navigator = weex.requireModule('navigator')
-  const modal = weex.requireModule('modal')
 
-  export default {
-      methods: {
-          jump(ev) {
-              navigator.push({},)
-              modal.toast({
-                  message:ev,
-                  duration:0.5
-              })
-          }
-      }
-  }
-</script>
+<!--<script>-->
+  <!--const navigator = weex.requireModule('navigator')-->
+  <!--const modal = weex.requireModule('modal')-->
+
+  <!--export default {-->
+      <!--methods: {-->
+          <!--jump(ev) {-->
+              <!--navigator.push({},)-->
+              <!--modal.toast({-->
+                  <!--message:ev,-->
+                  <!--duration:0.5-->
+              <!--})-->
+          <!--}-->
+      <!--}-->
+  <!--}-->
+<!--</script>-->
 
 <style scoped>
 
@@ -50,20 +51,6 @@
     border-bottom-color: #DDDDDD;
     background-color: #FF6600;
   }
-  .logo {
-    position: relative;
-    width: 50px;
-    height: 50px;
-    top: 35px;
-    left: 35px;
-    border-width: 3px;
-    border-style: solid;
-    border-color: #FFFFFF;
-  }
-  .image {
-    width: 44px;
-    height: 44px;
-  }
   .nav {
 
     display: flex;
@@ -72,7 +59,7 @@
     top: 35px;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
 
   }
